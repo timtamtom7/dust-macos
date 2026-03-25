@@ -18,6 +18,7 @@
 		CF82FBFD2B14E59B4F684F3D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA2A680CC0DB69BB81D45C0 /* MainViewModel.swift */; };
 		DE09808C693A8043F4645D82 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E2F5CFB8E34A5C13494BF /* main.swift */; };
 		F0E06092B599873576F9CEB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F740D1324C9AB481FA8EC1 /* AppDelegate.swift */; };
+		F21601ED993F0A179E152A92 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = CCDDAD2A4440181E7BE88039 /* PrivacyInfo.xcprivacy */; };
 		F87292BC063761799086B5FE /* DuplicateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BDC3D4BA4DCA5BF82DA81 /* DuplicateGroupView.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		9BA2A680CC0DB69BB81D45C0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B3F740D1324C9AB481FA8EC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD0E2F5CFB8E34A5C13494BF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CCDDAD2A4440181E7BE88039 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		E250D1E245E6B57A51DACFF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC3B039B400600E2FEB34D08 /* Dust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 				5D4C13D57987874108B0CF66 /* Info.plist */,
 				BD0E2F5CFB8E34A5C13494BF /* main.swift */,
 				9BA2A680CC0DB69BB81D45C0 /* MainViewModel.swift */,
+				CCDDAD2A4440181E7BE88039 /* PrivacyInfo.xcprivacy */,
 				040175A6915942937E0A2963 /* ScanHistoryStore.swift */,
 				88B0C5088244C8630E0FB596 /* Theme.swift */,
 				81329FF317629B4A713846F7 /* Models */,
@@ -101,6 +104,7 @@
 			buildConfigurationList = 23BC86A6EB360CB1CC25B34C /* Build configuration list for PBXNativeTarget "Dust" */;
 			buildPhases = (
 				13F9B0BE83FE62946C7DF46E /* Sources */,
+				B85328CB0F94E115F7849468 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -121,7 +125,7 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					EA625E1B12B221EFE35A6F98 = {
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -141,6 +145,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B85328CB0F94E115F7849468 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F21601ED993F0A179E152A92 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		13F9B0BE83FE62946C7DF46E /* Sources */ = {
@@ -199,7 +214,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -265,7 +280,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_HARDENED_RUNTIME = YES;
