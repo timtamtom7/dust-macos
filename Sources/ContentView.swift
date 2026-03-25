@@ -2,22 +2,25 @@ import SwiftUI
 import AppKit
 
 // MARK: - ContentView (Main Window)
+
 struct ContentView: View {
     @StateObject private var viewModel = MainViewModel()
     @State private var selectedGroup: DuplicateGroup?
     @State private var selectedFile: FileItem?
+    @State private var selectedSmartGroup: SmartGroup?
+    @State private var showSettings = false
 
     var body: some View {
         HSplitView {
-            // Left: Folder List
-            folderSidebar
-                .frame(minWidth: 200, maxWidth: 280)
+            // Left: Smart Groups + Folders
+            smartGroupsSidebar
+                .frame(minWidth: 180, maxWidth: 240)
 
             // Center: Duplicate Groups
-            duplicateListView
-                .frame(minWidth: 300)
+            duplicateGroupsSidebar
+                .frame(minWidth: 280)
 
-            // Right: File Details / Preview
+            // Right: File Details
             fileDetailView
                 .frame(minWidth: 250)
         }
@@ -44,58 +47,81 @@ struct ContentView: View {
         } message: {
             Text("Move \(viewModel.selectedCount) files to Trash?")
         }
+        .sheet(isPresented: $showSettings) {
+            SettingsView(viewModel: viewModel)
+        }
     }
 
-    // MARK: - Folder Sidebar
-    private var folderSidebar: some View {
+    // MARK: - Smart Groups Sidebar
+
+    private var smartGroupsSidebar: some View {
         VStack(spacing: 0) {
             HStack {
-                Text("Folders")
+                Text("Smart Groups")
                     .font(.headline)
                 Spacer()
-                Button(action: { viewModel.addFolder() }) {
-                    Image(systemName: "plus")
-                }
-                .buttonStyle(.borderless)
             }
             .padding()
 
             Divider()
 
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: 2) {
+                    ForEach(SmartGroup.allGroups) { group in
+                        smartGroupRow(group)
+                    }
+                }
+                .padding(.vertical, 8)
+            }
+
+            Divider()
+
+            // Folder section
+            HStack {
+                Text("Folders")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                Spacer()
+            }
+            .padding(.horizontal, 12)
+            .padding(.top, 8)
+
             if viewModel.selectedFolders.isEmpty {
-                VStack(spacing: 12) {
-                    Image(systemName: "folder.badge.plus")
-                        .font(.largeTitle)
-                        .foregroundColor(.secondary)
-                    Text("No folders selected")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                    Button("Add Folder") {
-                        viewModel.addFolder()
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .tint(Theme.accent)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-            } else {
-                List {
-                    ForEach(viewModel.selectedFolders, id: \.path) { folder in
+                VStack(spacing: 8) {
+                    Button(action: { viewModel.addFolder() }) {
                         HStack {
-                            Image(systemName: "folder.fill")
-                                .foregroundColor(Theme.accent)
-                            Text(folder.name)
-                                .lineLimit(1)
-                            Spacer()
-                            Button(action: { viewModel.removeFolder(folder) }) {
-                                Image(systemName: "xmark")
-                                    .font(.caption)
-                            }
-                            .buttonStyle(.borderless)
+                            Image(systemName: "plus")
+                            Text("Add Folder")
                         }
-                        .padding(.vertical, 4)
+                        .font(.system(size: 12))
                     }
                 }
-                .listStyle(.sidebar)
+                .padding(.vertical, 8)
+            } else {
+                ScrollView {
+                    LazyVStack(alignment: .leading, spacing: 2) {
+                        ForEach(viewModel.selectedFolders, id: \.path) { folder in
+                            HStack {
+                                Image(systemName: "folder.fill")
+                                    .font(.system(size: 11))
+                                    .foregroundColor(Theme.accent)
+                                Text(folder.name)
+                                    .font(.system(size: 12))
+                                    .lineLimit(1)
+                                Spacer()
+                                Button(action: { viewModel.removeFolder(folder) }) {
+                                    Image(systemName: "xmark")
+                                        .font(.system(size: 9))
+                                        .foregroundColor(.secondary)
+                                }
+                                .buttonStyle(.borderless)
+                            }
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 3)
+                        }
+                    }
+                    .padding(.vertical, 4)
+                }
             }
 
             Divider()
@@ -106,30 +132,54 @@ struct ContentView: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
                     Picker("", selection: $viewModel.minFileSize) {
-                        Text("1 KB").tag(1024)
-                        Text("10 KB").tag(10240)
-                        Text("100 KB").tag(102400)
-                        Text("1 MB").tag(1048576)
+                        Text("1 KB").tag(Int64(1024))
+                        Text("10 KB").tag(Int64(10240))
+                        Text("100 KB").tag(Int64(102400))
+                        Text("1 MB").tag(Int64(1048576))
                     }
                     .pickerStyle(.menu)
                     .frame(width: 100)
                 }
 
-                Button(action: { viewModel.startScan() }) {
-                    Label("Start Scan", systemImage: "magnifyingglass")
-                        .frame(maxWidth: .infinity)
+                HStack(spacing: 8) {
+                    Button(action: { viewModel.startScan() }) {
+                        Label("Scan", systemImage: "magnifyingglass")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(Theme.accent)
+                    .disabled(viewModel.selectedFolders.isEmpty || viewModel.isScanning)
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(Theme.accent)
-                .disabled(viewModel.selectedFolders.isEmpty || viewModel.isScanning)
             }
             .padding()
         }
-        .cardStyle()
+        .background(Color(nsColor: NSColor.controlBackgroundColor))
     }
 
-    // MARK: - Duplicate List
-    private var duplicateListView: some View {
+    private func smartGroupRow(_ group: SmartGroup) -> some View {
+        Button(action: { selectedSmartGroup = group }) {
+            HStack {
+                Image(systemName: group.icon)
+                    .font(.system(size: 12))
+                    .foregroundColor(selectedSmartGroup?.id == group.id ? Theme.accent : .secondary)
+                Text(group.name)
+                    .font(.system(size: 13))
+                    .foregroundColor(selectedSmartGroup?.id == group.id ? Theme.accent : .primary)
+                Spacer()
+                Text("\(filteredGroups(for: group).count)")
+                    .font(.system(size: 11))
+                    .foregroundColor(.secondary)
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 5)
+            .background(selectedSmartGroup?.id == group.id ? Theme.accent.opacity(0.1) : Color.clear)
+        }
+        .buttonStyle(.plain)
+    }
+
+    // MARK: - Duplicate Groups Sidebar
+
+    private var duplicateGroupsSidebar: some View {
         VStack(spacing: 0) {
             HStack {
                 Text("Duplicate Groups")
@@ -141,6 +191,7 @@ struct ContentView: View {
                     Text(viewModel.progressMessage)
                         .font(.caption)
                         .foregroundColor(.secondary)
+                        .lineLimit(1)
                 }
             }
             .padding()
@@ -149,6 +200,7 @@ struct ContentView: View {
 
             if viewModel.duplicateGroups.isEmpty && !viewModel.isScanning {
                 VStack(spacing: 12) {
+                    Spacer()
                     Image(systemName: "doc.on.doc")
                         .font(.largeTitle)
                         .foregroundColor(.secondary)
@@ -160,12 +212,13 @@ struct ContentView: View {
                             .font(.caption2)
                             .foregroundColor(.secondary)
                     }
+                    Spacer()
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 ScrollView {
                     LazyVStack(spacing: 12) {
-                        ForEach(viewModel.duplicateGroups) { group in
+                        ForEach(filteredGroups) { group in
                             DuplicateGroupView(
                                 group: group,
                                 isExpanded: selectedGroup?.id == group.id,
@@ -180,31 +233,97 @@ struct ContentView: View {
                 }
             }
         }
-        .cardStyle()
+        .background(Color(nsColor: NSColor.windowBackgroundColor))
     }
 
     // MARK: - File Detail View
+
     private var fileDetailView: some View {
         VStack {
             if let file = selectedFile {
                 FileDetailView(file: file)
             } else {
                 VStack(spacing: 12) {
+                    Spacer()
                     Image(systemName: "info.circle")
                         .font(.largeTitle)
                         .foregroundColor(.secondary)
                     Text("Select a file to view details")
                         .font(.caption)
                         .foregroundColor(.secondary)
+                    Spacer()
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
-        .cardStyle()
+        .background(Color(nsColor: NSColor.controlBackgroundColor))
+    }
+
+    // MARK: - Helpers
+
+    private var filteredGroups: [DuplicateGroup] {
+        guard let smartGroup = selectedSmartGroup else {
+            return viewModel.duplicateGroups
+        }
+        return filteredGroups(for: smartGroup)
+    }
+
+    private func filteredGroups(for smartGroup: SmartGroup) -> [DuplicateGroup] {
+        viewModel.duplicateGroups.filter(smartGroup.filter)
+    }
+}
+
+// MARK: - Settings View
+
+struct SettingsView: View {
+    @ObservedObject var viewModel: MainViewModel
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack {
+                Text("Settings")
+                    .font(.headline)
+                Spacer()
+                Button(action: { dismiss() }) {
+                    Image(systemName: "xmark")
+                }
+                .buttonStyle(.plain)
+            }
+            .padding()
+
+            Divider()
+
+            ScrollView {
+                VStack(spacing: 16) {
+                    // Scan settings
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("CLOUD STORAGE")
+                            .font(.system(size: 11, weight: .semibold))
+                            .foregroundColor(.secondary)
+                            .tracking(0.05)
+
+                        VStack(alignment: .leading, spacing: 8) {
+                            ForEach(CloudStorageProvider.defaultProviders) { provider in
+                                Toggle(provider.name, isOn: .constant(false))
+                                    .toggleStyle(.switch)
+                                    .controlSize(.small)
+                            }
+                        }
+                        .padding(12)
+                        .background(Color(nsColor: NSColor.controlBackgroundColor))
+                        .cornerRadius(8)
+                    }
+                }
+                .padding(16)
+            }
+        }
+        .frame(width: 400, height: 400)
     }
 }
 
 // MARK: - File Detail View
+
 struct FileDetailView: View {
     let file: FileItem
     @State private var previewImage: NSImage?
@@ -233,7 +352,7 @@ struct FileDetailView: View {
                     DetailRow(label: "Path", value: file.path)
                     DetailRow(label: "Modified", value: file.modificationDate.formatted())
                     if let hash = file.hash {
-                        DetailRow(label: "SHA256", value: String(hash.prefix(16)) + "...")
+                        DetailRow(label: "SHA256", value: String(hash.prefix(24)) + "...")
                     }
                 }
 
@@ -248,7 +367,7 @@ struct FileDetailView: View {
                     Text(text)
                         .font(.system(.caption, design: .monospaced))
                         .padding(8)
-                        .background(Color(NSColor.textBackgroundColor))
+                        .background(Color(nsColor: NSColor.textBackgroundColor))
                         .cornerRadius(Theme.cornerRadiusSmall)
                 }
             }
@@ -291,7 +410,6 @@ struct DetailRow: View {
     }
 }
 
-// MARK: - File Icon View
 struct FileIconView: View {
     let url: URL
     var size: CGFloat = 24
