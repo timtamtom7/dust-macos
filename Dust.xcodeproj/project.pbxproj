@@ -20,6 +20,7 @@
 		F0E06092B599873576F9CEB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F740D1324C9AB481FA8EC1 /* AppDelegate.swift */; };
 		F21601ED993F0A179E152A92 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = CCDDAD2A4440181E7BE88039 /* PrivacyInfo.xcprivacy */; };
 		F87292BC063761799086B5FE /* DuplicateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BDC3D4BA4DCA5BF82DA81 /* DuplicateGroupView.swift */; };
+		AABBCCDDEE00112233445566 /* SemanticDeduplicationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBCCDDEE00112233445577 /* SemanticDeduplicationEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		CCDDAD2A4440181E7BE88039 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		E250D1E245E6B57A51DACFF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC3B039B400600E2FEB34D08 /* Dust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dust.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABBCCDDEE00112233445577 /* SemanticDeduplicationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticDeduplicationEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -72,6 +74,7 @@
 				CCDDAD2A4440181E7BE88039 /* PrivacyInfo.xcprivacy */,
 				040175A6915942937E0A2963 /* ScanHistoryStore.swift */,
 				88B0C5088244C8630E0FB596 /* Theme.swift */,
+				AABBCCDDEE00112233445577 /* SemanticDeduplicationEngine.swift */,
 				81329FF317629B4A713846F7 /* Models */,
 				BAF19D8CF415ED0C35865FB1 /* Services */,
 			);
@@ -174,6 +177,7 @@
 				3919B2D5E5EFDAFB875107F4 /* Theme.swift in Sources */,
 				261D08427FB5B194B19EEE9D /* iCloudSyncManager.swift in Sources */,
 				DE09808C693A8043F4645D82 /* main.swift in Sources */,
+				AABBCCDDEE00112233445566 /* SemanticDeduplicationEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
