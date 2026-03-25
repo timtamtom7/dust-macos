@@ -2,7 +2,7 @@ import Foundation
 import CryptoKit
 
 // MARK: - Models
-struct FileItem: Identifiable, Hashable {
+struct FileItem: Identifiable, Hashable, Codable {
     let id: UUID
     let path: String
     let name: String
@@ -15,7 +15,7 @@ struct FileItem: Identifiable, Hashable {
     var formattedSize: String { ByteCountFormatter.string(fromByteCount: size, countStyle: .file) }
 }
 
-struct DuplicateGroup: Identifiable {
+struct DuplicateGroup: Identifiable, Codable {
     let id: UUID
     let files: [FileItem]
     var totalWastedSpace: Int64

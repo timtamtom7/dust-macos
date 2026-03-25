@@ -163,3 +163,29 @@ enum ScanPreset {
         }
     }
 }
+
+// MARK: - DustState
+
+@MainActor
+final class DustState {
+    static let shared = DustState()
+
+    var viewModel: MainViewModel?
+    var history: [ScanResult] = []
+
+    private init() {}
+
+    func configure(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+    }
+}
+
+// MARK: - ScanResult
+
+struct ScanResult: Codable {
+    let duplicateGroups: [DuplicateGroup]
+    let totalWastedSpace: Int64
+    let totalFilesScanned: Int
+    let scanDuration: TimeInterval
+}
+
