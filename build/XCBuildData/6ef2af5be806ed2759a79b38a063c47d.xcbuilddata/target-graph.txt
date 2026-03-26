@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'Dust' in project 'Dust'
+➜ Explicit dependency on target 'DustWidgets' in project 'Dust'
+Target 'DustWidgets' in project 'Dust' (no dependencies)

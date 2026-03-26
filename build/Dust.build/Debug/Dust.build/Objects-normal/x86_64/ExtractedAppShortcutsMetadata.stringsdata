@@ -8,28 +8,83 @@
     "AppShortcuts" : [
       {
         "key" : "Scan for duplicates in ${applicationName}",
-        "location" : {
-          "startingColumn" : 0,
-          "startingLine" : 7
-        },
         "values" : [
           "Scan for duplicates in ${applicationName}",
           "Find duplicates with ${applicationName}"
-        ]
+        ],
+        "location" : {
+          "startingColumn" : 0,
+          "startingLine" : 7
+        }
       },
       {
         "key" : "Get ${applicationName} last scan",
-        "location" : {
-          "startingLine" : 7,
-          "startingColumn" : 0
-        },
         "values" : [
           "Get ${applicationName} last scan",
           "Last duplicate scan in ${applicationName}"
-        ]
+        ],
+        "location" : {
+          "startingColumn" : 0,
+          "startingLine" : 7
+        }
+      },
+      {
+        "key" : "Start focus session in ${applicationName}",
+        "values" : [
+          "Start focus session in ${applicationName}",
+          "Begin deep work with ${applicationName}"
+        ],
+        "location" : {
+          "startingColumn" : 0,
+          "startingLine" : 7
+        }
+      },
+      {
+        "key" : "End focus session in ${applicationName}",
+        "values" : [
+          "End focus session in ${applicationName}",
+          "Stop focusing with ${applicationName}"
+        ],
+        "location" : {
+          "startingColumn" : 0,
+          "startingLine" : 7
+        }
+      },
+      {
+        "key" : "Get focus stats in ${applicationName}",
+        "values" : [
+          "Get focus stats in ${applicationName}",
+          "Show my focus stats in ${applicationName}"
+        ],
+        "location" : {
+          "startingColumn" : 0,
+          "startingLine" : 7
+        }
+      },
+      {
+        "key" : "Block app in ${applicationName}",
+        "values" : [
+          "Block app in ${applicationName}",
+          "Block app with ${applicationName}"
+        ],
+        "location" : {
+          "startingColumn" : 0,
+          "startingLine" : 7
+        }
+      },
+      {
+        "key" : "Get focus insights in ${applicationName}",
+        "values" : [
+          "Get focus insights in ${applicationName}",
+          "AI insights with ${applicationName}"
+        ],
+        "location" : {
+          "startingColumn" : 0,
+          "startingLine" : 7
+        }
       }
     ]
   },
-  "source" : "\/Users\/mauriello\/Dev\/dust-macos\/Sources\/Services\/ShortcutsManager.swift",
-  "version" : 1
+  "version" : 1,
+  "source" : "\/Users\/mauriello\/Dev\/dust-macos\/Sources\/Services\/ShortcutsManager.swift"
 }

@@ -6,31 +6,44 @@
 	<dict>
 		<key>Resources/Metadata.appintents/extract.actionsdata</key>
 		<data>
-		twIKlZQEw0U5Fj/yIpexYpvTS3o=
+		KZ2CurvHas5rmnox0AeiWfgD3Ng=
 		</data>
 		<key>Resources/Metadata.appintents/version.json</key>
 		<data>
-		TY2tWAqgMoaE49pcDLWKF8StLJ0=
+		kSxBG4AkjH7gz3iMXvK2JDx3VZI=
 		</data>
 		<key>Resources/PrivacyInfo.xcprivacy</key>
 		<data>
 		IJ4+XymqJKr+Gh4DocT+24mO6cs=
 		</data>
+		<key>Resources/StoreKit.storekit</key>
+		<data>
+		v82JFnW8I/FixL0mP86LlNHHpgA=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>PlugIns/DustWidgets.appex</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			MLiSdMnqqtp0wHiiUGGDXYHYpvQ=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"30b89274c9eaaada74c078a25061835d81d8a6f4" or cdhash H"4e3701b0fc0a2b7cba5a5f12e07602783e098d35"</string>
+		</dict>
 		<key>Resources/Metadata.appintents/extract.actionsdata</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0UXiAg94l2/leKO9QUotiFPDllORL01EJA9VH5xER5U=
+			qzj0DxDNCgnY1fc7f/oFvbK/QIUG4aeBK/oxISt9dus=
 			</data>
 		</dict>
 		<key>Resources/Metadata.appintents/version.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y056N8w2ciFNVb92lsX2dN5w8ZQHSQrKaKbrHAt2K9Q=
+			U78a4FzpdDBQtWWERXa1pFNZguleRB2jhjmEeUCRdy4=
 			</data>
 		</dict>
 		<key>Resources/PrivacyInfo.xcprivacy</key>
@@ -38,6 +51,13 @@
 			<key>hash2</key>
 			<data>
 			cTNH3zw2xjk2QpCgVy+K/pGxDisSCMp1VxokwfyGLso=
+			</data>
+		</dict>
+		<key>Resources/StoreKit.storekit</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			L5D85oHh6rAnk7NNZDhVRXtPvAlU1bPa6C+Mkn6KqyE=
 			</data>
 		</dict>
 	</dict>

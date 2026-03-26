@@ -87,7 +87,7 @@ final class DustSyncManager: ObservableObject {
         )
 
         return SyncPayload(
-            scanHistory: DustState.shared.history ?? [],
+            scanHistory: DustState.shared.history,
             settings: settings
         )
     }

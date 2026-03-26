@@ -17,7 +17,12 @@ final class ScanHistoryStore {
     private let dbPath: String
 
     init() {
-        let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+        guard let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else {
+            dbPath = NSTemporaryDirectory() + "dust.sqlite"
+            openDatabase()
+            createTables()
+            return
+        }
         let appFolder = appSupport.appendingPathComponent("Dust", isDirectory: true)
         try? FileManager.default.createDirectory(at: appFolder, withIntermediateDirectories: true)
         dbPath = appFolder.appendingPathComponent("dust.sqlite").path
@@ -27,7 +32,9 @@ final class ScanHistoryStore {
     }
 
     deinit {
-        sqlite3_close(db)
+        if db != nil {
+            sqlite3_close_v2(db)
+        }
     }
 
     private func openDatabase() {
