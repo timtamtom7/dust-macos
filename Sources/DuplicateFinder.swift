@@ -1,6 +1,6 @@
 import Foundation
 
-struct DuplicateGroup: Identifiable {
+struct DuplicateFinderGroup: Identifiable {
     let id = UUID()
     let files: [URL]
     let size: UInt64
@@ -11,7 +11,7 @@ final class DuplicateFinder {
 
     private init() {}
 
-    func findDuplicates(at url: URL, completion: @escaping ([DuplicateGroup]) -> Void) {
+    func findDuplicates(at url: URL, completion: @escaping ([DuplicateFinderGroup]) -> Void) {
         DispatchQueue.global(qos: .userInitiated).async {
             var sizeGroups: [UInt64: [URL]] = [:]
 
@@ -32,9 +32,9 @@ final class DuplicateFinder {
                 }
             }
 
-            var duplicates: [DuplicateGroup] = []
+            var duplicates: [DuplicateFinderGroup] = []
             for (size, urls) in sizeGroups where urls.count > 1 && size > 1000 {
-                duplicates.append(DuplicateGroup(files: urls, size: size))
+                duplicates.append(DuplicateFinderGroup(files: urls, size: size))
             }
 
             DispatchQueue.main.async {

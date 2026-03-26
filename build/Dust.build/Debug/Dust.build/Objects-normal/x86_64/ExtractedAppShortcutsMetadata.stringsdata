@@ -1,0 +1,35 @@
+{
+  "tables" : {
+    "Localizable" : [
+      {
+        "key" : "Scan ${directoryPath} for duplicates"
+      }
+    ],
+    "AppShortcuts" : [
+      {
+        "key" : "Scan for duplicates in ${applicationName}",
+        "location" : {
+          "startingColumn" : 0,
+          "startingLine" : 7
+        },
+        "values" : [
+          "Scan for duplicates in ${applicationName}",
+          "Find duplicates with ${applicationName}"
+        ]
+      },
+      {
+        "key" : "Get ${applicationName} last scan",
+        "location" : {
+          "startingLine" : 7,
+          "startingColumn" : 0
+        },
+        "values" : [
+          "Get ${applicationName} last scan",
+          "Last duplicate scan in ${applicationName}"
+        ]
+      }
+    ]
+  },
+  "source" : "\/Users\/mauriello\/Dev\/dust-macos\/Sources\/Services\/ShortcutsManager.swift",
+  "version" : 1
+}

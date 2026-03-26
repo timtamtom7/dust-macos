@@ -1,0 +1,209 @@
+{
+  "" : {
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Dust-primary.dia",
+    "emit-module-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Dust-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Dust-primary-emit-module.dia",
+    "pch" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Dust-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Dust-primary.swiftdeps"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/AccessibilityExtensions.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AccessibilityExtensions.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AccessibilityExtensions.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AccessibilityExtensions.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/AccessibilityExtensions.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AccessibilityExtensions.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AccessibilityExtensions.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AccessibilityExtensions.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AccessibilityExtensions~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/AppDelegate.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AppDelegate.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AppDelegate.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AppDelegate.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/AppDelegate~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/ContentView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/DiskHistory.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DiskHistory.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DiskHistory.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DiskHistory.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/DiskHistory.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DiskHistory.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DiskHistory.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DiskHistory.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DiskHistory~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/DuplicateFinder.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinder.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinder.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinder.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinder.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinder.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinder.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinder.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinder~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/DuplicateFinderService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinderService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinderService.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinderService.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinderService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinderService.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinderService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinderService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateFinderService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/DuplicateGroupView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateGroupView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateGroupView.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateGroupView.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateGroupView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateGroupView.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateGroupView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateGroupView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DuplicateGroupView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/DustExport.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustExport.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustExport.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustExport.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustExport.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustExport.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustExport.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustExport.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustExport~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/ExclusionManager.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExclusionManager.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExclusionManager.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExclusionManager.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExclusionManager.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExclusionManager.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExclusionManager.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExclusionManager.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExclusionManager~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/MainViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/MainViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/MainViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/MainViewModel.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/MainViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/MainViewModel.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/MainViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/MainViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/MainViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/Models/DustR12R15.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustR12R15.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustR12R15.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustR12R15.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustR12R15.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustR12R15.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustR12R15.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustR12R15.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/DustR12R15~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/Models/SmartGroups.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartGroups.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartGroups.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartGroups.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartGroups.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartGroups.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartGroups.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartGroups.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartGroups~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/ScanHistoryStore.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ScanHistoryStore.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ScanHistoryStore.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ScanHistoryStore.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/ScanHistoryStore.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ScanHistoryStore.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ScanHistoryStore.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ScanHistoryStore.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ScanHistoryStore~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/SemanticDeduplicationEngine.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SemanticDeduplicationEngine.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SemanticDeduplicationEngine.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SemanticDeduplicationEngine.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/SemanticDeduplicationEngine.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SemanticDeduplicationEngine.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SemanticDeduplicationEngine.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SemanticDeduplicationEngine.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SemanticDeduplicationEngine~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/Services/ExportReportService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExportReportService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExportReportService.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExportReportService.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExportReportService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExportReportService.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExportReportService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExportReportService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ExportReportService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/Services/ShortcutsManager.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ShortcutsManager.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ShortcutsManager.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ShortcutsManager.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/ShortcutsManager.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ShortcutsManager.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ShortcutsManager.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ShortcutsManager.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/ShortcutsManager~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/Services/iCloudSyncManager.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/iCloudSyncManager.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/iCloudSyncManager.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/iCloudSyncManager.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/iCloudSyncManager.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/iCloudSyncManager.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/iCloudSyncManager.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/iCloudSyncManager.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/iCloudSyncManager~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/SmartCleaner.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartCleaner.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartCleaner.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartCleaner.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartCleaner.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartCleaner.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartCleaner.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartCleaner.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/SmartCleaner~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/Theme.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Theme.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Theme.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Theme.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/Theme.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Theme.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Theme.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Theme.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/Theme~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/dust-macos/Sources/main.swift" : {
+    "const-values" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/main.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/main.d",
+    "diagnostics" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/main.dia",
+    "index-unit-output-path" : "/Dust.build/Debug/Dust.build/Objects-normal/arm64/main.o",
+    "llvm-bc" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/main.bc",
+    "object" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/main.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/main.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/dust-macos/build/Dust.build/Debug/Dust.build/Objects-normal/arm64/main~partial.swiftmodule"
+  }
+}
