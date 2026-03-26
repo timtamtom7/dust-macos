@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05A04549F8E6770B49159020 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8724CD36F8490E90A034D6E3 /* StoreKit.framework */; };
+		0C6FFDC90DF429779B706A2D /* AutomationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4264478A98B61EF705FB8E /* AutomationManager.swift */; };
 		14D7FCB05B014F8DB4737A3D /* SemanticDeduplicationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E2F9587D1FDE724749EA35 /* SemanticDeduplicationEngine.swift */; };
 		1C9C105244449700344FC7E1 /* DustEnterprise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1010A66AE28E8586D560D8B5 /* DustEnterprise.swift */; };
 		202DF2ACF22D30C91AF61637 /* ScanHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040175A6915942937E0A2963 /* ScanHistoryStore.swift */; };
@@ -14,7 +16,9 @@
 		36F01AC3C6830463B65B5201 /* PrivacyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF8985BA519E69E1E4D777C /* PrivacyService.swift */; };
 		3919B2D5E5EFDAFB875107F4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B0C5088244C8630E0FB596 /* Theme.swift */; };
 		395E62EB917D01979BD0205B /* AccessibilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57789BFBF328C00C5FB7044C /* AccessibilityExtensions.swift */; };
+		3E8A1806738B1745307210A1 /* DustWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB5E5093C12B6DD711BDBA8 /* DustWidgets.swift */; };
 		40F96150CB978B7DBA66E28C /* DustAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868DDE432EBEBAB9D85D13A /* DustAPI.swift */; };
+		43FE5B40253292E54B70A484 /* StoreKit.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E9759C8A062D602914C83 /* StoreKit.storekit */; };
 		45C5593B172548D80A1030C1 /* SmartCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF556D1FB0A04DF42E7E957 /* SmartCleaner.swift */; };
 		4ED3F699A4EB1ADA4C11DD66 /* ExclusionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BA9841780B90C5EFFAC2D2 /* ExclusionManager.swift */; };
 		66388D8BBA736A534B0FFDE6 /* ShortcutsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC970A2F2D8F8B029967771 /* ShortcutsManager.swift */; };
@@ -22,18 +26,45 @@
 		80975B9D32F3FD008FB538E9 /* SubscriptionTier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178EB237E0C5BB4612E2EE3 /* SubscriptionTier.swift */; };
 		902DC0194BA7DA9798D2D202 /* DuplicateFinderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF0D5B546035ED26A9E15F /* DuplicateFinderService.swift */; };
 		94ECFACF2A951CE8D8687E6A /* DiskHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F85786A1D27F0F0994215 /* DiskHistory.swift */; };
+		A348CAD8CBE238D3183B9EAC /* DustWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 920B84C9692DA8BF56B82120 /* DustWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A4DB36CA8DE49E2DCC87B199 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E250D1E245E6B57A51DACFF4 /* ContentView.swift */; };
 		AF492CEF532402592776CD9B /* ExportReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0E422B2F81556AC46DF /* ExportReportService.swift */; };
 		BADC4FD90EDA44FFF15F20FB /* SmartGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143923966285663C9BEE4124 /* SmartGroups.swift */; };
 		BD38D4264CF390FAE1946EE3 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117B85C47BF132C0839BBF2 /* SubscriptionManager.swift */; };
 		CF82FBFD2B14E59B4F684F3D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA2A680CC0DB69BB81D45C0 /* MainViewModel.swift */; };
+		D21C5623AE2675730ECF4F6C /* DustVisionOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3003569B1EA80B1E8237E63 /* DustVisionOS.swift */; };
 		DE09808C693A8043F4645D82 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E2F5CFB8E34A5C13494BF /* main.swift */; };
 		E154214FD72B18E9198F858C /* DustR12R15.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC5FF07A302A6E327C44A6 /* DustR12R15.swift */; };
+		E9950308392DE8487D478743 /* PrivacyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6222294C1DED608D768E6665 /* PrivacyManager.swift */; };
 		ED86FD9395B4BC8F2E93B8D5 /* DustExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BECCBDC4C573D60AFB65C3 /* DustExport.swift */; };
 		F0E06092B599873576F9CEB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F740D1324C9AB481FA8EC1 /* AppDelegate.swift */; };
 		F21601ED993F0A179E152A92 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = CCDDAD2A4440181E7BE88039 /* PrivacyInfo.xcprivacy */; };
 		F87292BC063761799086B5FE /* DuplicateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BDC3D4BA4DCA5BF82DA81 /* DuplicateGroupView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67AB35F67D6F996626841220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 311686CA3DF211FF58663312 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA7C0D27473083848D0F5DE1;
+			remoteInfo = DustWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		058BECEFF07B84796D39BF6E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A348CAD8CBE238D3183B9EAC /* DustWidgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		040175A6915942937E0A2963 /* ScanHistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHistoryStore.swift; sourceTree = "<group>"; };
@@ -41,17 +72,25 @@
 		143923966285663C9BEE4124 /* SmartGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartGroups.swift; sourceTree = "<group>"; };
 		152F85786A1D27F0F0994215 /* DiskHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskHistory.swift; sourceTree = "<group>"; };
 		19E2F9587D1FDE724749EA35 /* SemanticDeduplicationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticDeduplicationEngine.swift; sourceTree = "<group>"; };
+		1EB5E5093C12B6DD711BDBA8 /* DustWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustWidgets.swift; sourceTree = "<group>"; };
 		2178EB237E0C5BB4612E2EE3 /* SubscriptionTier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionTier.swift; sourceTree = "<group>"; };
 		2939C0E422B2F81556AC46DF /* ExportReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportReportService.swift; sourceTree = "<group>"; };
 		3868DDE432EBEBAB9D85D13A /* DustAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustAPI.swift; sourceTree = "<group>"; };
+		3D6E9759C8A062D602914C83 /* StoreKit.storekit */ = {isa = PBXFileReference; path = StoreKit.storekit; sourceTree = "<group>"; };
 		4902BA5CDE8743AD3DD9AE3D /* Dust.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dust.entitlements; sourceTree = "<group>"; };
 		54FF0D5B546035ED26A9E15F /* DuplicateFinderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateFinderService.swift; sourceTree = "<group>"; };
 		57789BFBF328C00C5FB7044C /* AccessibilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityExtensions.swift; sourceTree = "<group>"; };
 		57DCF38DB49B3F7CE4F75A80 /* iCloudSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudSyncManager.swift; sourceTree = "<group>"; };
 		5D4C13D57987874108B0CF66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6222294C1DED608D768E6665 /* PrivacyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyManager.swift; sourceTree = "<group>"; };
+		6B4264478A98B61EF705FB8E /* AutomationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationManager.swift; sourceTree = "<group>"; };
 		6CC970A2F2D8F8B029967771 /* ShortcutsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsManager.swift; sourceTree = "<group>"; };
+		6D0E7CC8B21847086069A7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8724CD36F8490E90A034D6E3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		88B0C5088244C8630E0FB596 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		8E4BDC3D4BA4DCA5BF82DA81 /* DuplicateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateGroupView.swift; sourceTree = "<group>"; };
+		920B84C9692DA8BF56B82120 /* DustWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DustWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		97D590F73EE7E9EE75DA604B /* DustWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DustWidgets.entitlements; sourceTree = "<group>"; };
 		9AF8985BA519E69E1E4D777C /* PrivacyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyService.swift; sourceTree = "<group>"; };
 		9BA2A680CC0DB69BB81D45C0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A43D99481739913EA2E7995B /* DuplicateFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateFinder.swift; sourceTree = "<group>"; };
@@ -64,16 +103,38 @@
 		CFAC5FF07A302A6E327C44A6 /* DustR12R15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustR12R15.swift; sourceTree = "<group>"; };
 		E250D1E245E6B57A51DACFF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E3BA9841780B90C5EFFAC2D2 /* ExclusionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusionManager.swift; sourceTree = "<group>"; };
+		F3003569B1EA80B1E8237E63 /* DustVisionOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustVisionOS.swift; sourceTree = "<group>"; };
 		FC3B039B400600E2FEB34D08 /* Dust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18B28441CF2842FD2A50413D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A04549F8E6770B49159020 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2D7E7A963B2C071502406D9C = {
 			isa = PBXGroup;
 			children = (
+				F346AC37608397101FE2D8F2 /* DustWidgets */,
 				A3D85BF91E454708F92B035C /* Sources */,
+				9D81D868BF1614ECCE8C92C9 /* Frameworks */,
 				C254C4939B7A38F6D3DC13BA /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		646AE2C23C70D01A00A9BCC0 /* VisionOS */ = {
+			isa = PBXGroup;
+			children = (
+				F3003569B1EA80B1E8237E63 /* DustVisionOS.swift */,
+			);
+			path = VisionOS;
 			sourceTree = "<group>";
 		};
 		81329FF317629B4A713846F7 /* Models */ = {
@@ -86,6 +147,14 @@
 				2178EB237E0C5BB4612E2EE3 /* SubscriptionTier.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9D81D868BF1614ECCE8C92C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8724CD36F8490E90A034D6E3 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A3D85BF91E454708F92B035C /* Sources */ = {
@@ -108,9 +177,11 @@
 				040175A6915942937E0A2963 /* ScanHistoryStore.swift */,
 				19E2F9587D1FDE724749EA35 /* SemanticDeduplicationEngine.swift */,
 				BCF556D1FB0A04DF42E7E957 /* SmartCleaner.swift */,
+				3D6E9759C8A062D602914C83 /* StoreKit.storekit */,
 				88B0C5088244C8630E0FB596 /* Theme.swift */,
 				81329FF317629B4A713846F7 /* Models */,
 				BAF19D8CF415ED0C35865FB1 /* Services */,
+				646AE2C23C70D01A00A9BCC0 /* VisionOS */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -118,8 +189,10 @@
 		BAF19D8CF415ED0C35865FB1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6B4264478A98B61EF705FB8E /* AutomationManager.swift */,
 				2939C0E422B2F81556AC46DF /* ExportReportService.swift */,
 				57DCF38DB49B3F7CE4F75A80 /* iCloudSyncManager.swift */,
+				6222294C1DED608D768E6665 /* PrivacyManager.swift */,
 				9AF8985BA519E69E1E4D777C /* PrivacyService.swift */,
 				6CC970A2F2D8F8B029967771 /* ShortcutsManager.swift */,
 				B117B85C47BF132C0839BBF2 /* SubscriptionManager.swift */,
@@ -131,8 +204,19 @@
 			isa = PBXGroup;
 			children = (
 				FC3B039B400600E2FEB34D08 /* Dust.app */,
+				920B84C9692DA8BF56B82120 /* DustWidgets.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F346AC37608397101FE2D8F2 /* DustWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				97D590F73EE7E9EE75DA604B /* DustWidgets.entitlements */,
+				1EB5E5093C12B6DD711BDBA8 /* DustWidgets.swift */,
+				6D0E7CC8B21847086069A7B8 /* Info.plist */,
+			);
+			path = DustWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,15 +228,33 @@
 			buildPhases = (
 				13F9B0BE83FE62946C7DF46E /* Sources */,
 				B85328CB0F94E115F7849468 /* Resources */,
+				18B28441CF2842FD2A50413D /* Frameworks */,
+				058BECEFF07B84796D39BF6E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				46BE9A55DB44C25A7BE70A9F /* PBXTargetDependency */,
 			);
 			name = Dust;
 			productName = Dust;
 			productReference = FC3B039B400600E2FEB34D08 /* Dust.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FA7C0D27473083848D0F5DE1 /* DustWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAFD1B1F841E7B12769C3B56 /* Build configuration list for PBXNativeTarget "DustWidgets" */;
+			buildPhases = (
+				43FCB605C88A419A83384EC5 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DustWidgets;
+			productName = DustWidgets;
+			productReference = 920B84C9692DA8BF56B82120 /* DustWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -164,6 +266,9 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					EA625E1B12B221EFE35A6F98 = {
+						ProvisioningStyle = Manual;
+					};
+					FA7C0D27473083848D0F5DE1 = {
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -181,6 +286,7 @@
 			projectRoot = "";
 			targets = (
 				EA625E1B12B221EFE35A6F98 /* Dust */,
+				FA7C0D27473083848D0F5DE1 /* DustWidgets */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21601ED993F0A179E152A92 /* PrivacyInfo.xcprivacy in Resources */,
+				43FE5B40253292E54B70A484 /* StoreKit.storekit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +310,7 @@
 			files = (
 				395E62EB917D01979BD0205B /* AccessibilityExtensions.swift in Sources */,
 				F0E06092B599873576F9CEB5 /* AppDelegate.swift in Sources */,
+				0C6FFDC90DF429779B706A2D /* AutomationManager.swift in Sources */,
 				A4DB36CA8DE49E2DCC87B199 /* ContentView.swift in Sources */,
 				94ECFACF2A951CE8D8687E6A /* DiskHistory.swift in Sources */,
 				7E9CF7814569B52BDD5B7AE1 /* DuplicateFinder.swift in Sources */,
@@ -212,9 +320,11 @@
 				1C9C105244449700344FC7E1 /* DustEnterprise.swift in Sources */,
 				ED86FD9395B4BC8F2E93B8D5 /* DustExport.swift in Sources */,
 				E154214FD72B18E9198F858C /* DustR12R15.swift in Sources */,
+				D21C5623AE2675730ECF4F6C /* DustVisionOS.swift in Sources */,
 				4ED3F699A4EB1ADA4C11DD66 /* ExclusionManager.swift in Sources */,
 				AF492CEF532402592776CD9B /* ExportReportService.swift in Sources */,
 				CF82FBFD2B14E59B4F684F3D /* MainViewModel.swift in Sources */,
+				E9950308392DE8487D478743 /* PrivacyManager.swift in Sources */,
 				36F01AC3C6830463B65B5201 /* PrivacyService.swift in Sources */,
 				202DF2ACF22D30C91AF61637 /* ScanHistoryStore.swift in Sources */,
 				14D7FCB05B014F8DB4737A3D /* SemanticDeduplicationEngine.swift in Sources */,
@@ -229,7 +339,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43FCB605C88A419A83384EC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8A1806738B1745307210A1 /* DustWidgets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46BE9A55DB44C25A7BE70A9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA7C0D27473083848D0F5DE1 /* DustWidgets */;
+			targetProxy = 67AB35F67D6F996626841220 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0B36A7E588E31095045774FC /* Debug */ = {
@@ -357,6 +483,25 @@
 			};
 			name = Release;
 		};
+		AE6CB8D3C72456E689892238 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DustWidgets/DustWidgets.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = DustWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dust.app.Dust.DustWidgets;
+				PRODUCT_NAME = DustWidgets;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
 		B261E8EC7E49525E5E376BE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -368,6 +513,26 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dust.app.Dust;
 				SDKROOT = macosx;
+				STOREKit_FILE = Sources/StoreKit.storekit;
+			};
+			name = Debug;
+		};
+		FE483F4CFC8AF1D53AA0C381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DustWidgets/DustWidgets.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = DustWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dust.app.Dust.DustWidgets;
+				PRODUCT_NAME = DustWidgets;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
 			};
 			name = Debug;
 		};
@@ -382,6 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dust.app.Dust;
 				SDKROOT = macosx;
+				STOREKit_FILE = Sources/StoreKit.storekit;
 			};
 			name = Release;
 		};
@@ -402,6 +568,15 @@
 			buildConfigurations = (
 				0B36A7E588E31095045774FC /* Debug */,
 				7A2B294AA3C5EE28C6CF94F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DAFD1B1F841E7B12769C3B56 /* Build configuration list for PBXNativeTarget "DustWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE483F4CFC8AF1D53AA0C381 /* Debug */,
+				AE6CB8D3C72456E689892238 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

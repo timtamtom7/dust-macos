@@ -1,0 +1,120 @@
+{
+  "identifier" : "com.dust.subscription",
+  "version" : 1,
+  "products" : [
+    {
+      "family" : "pro",
+      "displayName" : "Dust Pro",
+      "localizations" : [
+        {
+          "description" : "Unlimited blocking and ML insights",
+          "languageCode" : "en",
+          "displayName" : "Dust Pro"
+        }
+      ],
+      "price" : 4.99,
+      "priceFormatted" : "$4.99",
+      "productIdentifier" : "com.dust.pro.monthly",
+      "type" : "subscription",
+      "subscriptionGroup" : "com.dust.pro.group",
+      "subscriptionPeriod" : "P1M"
+    },
+    {
+      "family" : "pro",
+      "displayName" : "Dust Pro (Yearly)",
+      "localizations" : [
+        {
+          "description" : "Unlimited blocking and ML insights",
+          "languageCode" : "en",
+          "displayName" : "Dust Pro Yearly"
+        }
+      ],
+      "price" : 39.99,
+      "priceFormatted" : "$39.99",
+      "productIdentifier" : "com.dust.pro.yearly",
+      "type" : "subscription",
+      "subscriptionGroup" : "com.dust.pro.group",
+      "subscriptionPeriod" : "P1Y"
+    },
+    {
+      "family" : "team",
+      "displayName" : "Dust Team",
+      "localizations" : [
+        {
+          "description" : "Team focus sessions and accountability",
+          "languageCode" : "en",
+          "displayName" : "Dust Team"
+        }
+      ],
+      "price" : 8.99,
+      "priceFormatted" : "$8.99",
+      "productIdentifier" : "com.dust.team.monthly",
+      "type" : "subscription",
+      "subscriptionGroup" : "com.dust.team.group",
+      "subscriptionPeriod" : "P1M"
+    },
+    {
+      "family" : "team",
+      "displayName" : "Dust Team (Yearly)",
+      "localizations" : [
+        {
+          "description" : "Team focus sessions and accountability",
+          "languageCode" : "en",
+          "displayName" : "Dust Team Yearly"
+        }
+      ],
+      "price" : 69.99,
+      "priceFormatted" : "$69.99",
+      "productIdentifier" : "com.dust.team.yearly",
+      "type" : "subscription",
+      "subscriptionGroup" : "com.dust.team.group",
+      "subscriptionPeriod" : "P1Y"
+    },
+    {
+      "family" : "enterprise",
+      "displayName" : "Dust Enterprise",
+      "localizations" : [
+        {
+          "description" : "Enterprise focus management",
+          "languageCode" : "en",
+          "displayName" : "Dust Enterprise"
+        }
+      ],
+      "price" : 0.0,
+      "priceFormatted" : "Custom",
+      "productIdentifier" : "com.dust.enterprise.monthly",
+      "type" : "subscription",
+      "subscriptionGroup" : "com.dust.enterprise.group",
+      "subscriptionPeriod" : "P1M"
+    }
+  ],
+  "subscriptionGroups" : [
+    {
+      "id" : "com.dust.pro.group",
+      "localizations" : [
+        {
+          "name" : "Dust Pro",
+          "languageCode" : "en"
+        }
+      ]
+    },
+    {
+      "id" : "com.dust.team.group",
+      "localizations" : [
+        {
+          "name" : "Dust Team",
+          "languageCode" : "en"
+        }
+      ]
+    },
+    {
+      "id" : "com.dust.enterprise.group",
+      "localizations" : [
+        {
+          "name" : "Dust Enterprise",
+          "languageCode" : "en"
+        }
+      ]
+    }
+  ]
+}
