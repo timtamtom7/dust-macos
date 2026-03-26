@@ -8,10 +8,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var eventMonitor: Any?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        _ = TeamFocusService.shared
+        _ = DustEnterpriseService.shared
+        DustiOSService.shared.refreshWidget()
+        DustAPIService.shared.start()
+
         setupStatusItem()
         setupPopover()
         setupMainWindow()
         setupEventMonitor()
+    }
+
+    func applicationWillTerminate(_ notification: Notification) {
+        DustAPIService.shared.stop()
+        if let monitor = eventMonitor {
+            NSEvent.removeMonitor(monitor)
+        }
     }
 
     private func setupStatusItem() {
@@ -188,4 +200,3 @@ struct ScanResult: Codable {
     let totalFilesScanned: Int
     let scanDuration: TimeInterval
 }
-
