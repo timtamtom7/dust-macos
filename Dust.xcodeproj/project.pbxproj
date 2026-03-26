@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		14D7FCB05B014F8DB4737A3D /* SemanticDeduplicationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E2F9587D1FDE724749EA35 /* SemanticDeduplicationEngine.swift */; };
+		1C9C105244449700344FC7E1 /* DustEnterprise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1010A66AE28E8586D560D8B5 /* DustEnterprise.swift */; };
 		202DF2ACF22D30C91AF61637 /* ScanHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040175A6915942937E0A2963 /* ScanHistoryStore.swift */; };
 		261D08427FB5B194B19EEE9D /* iCloudSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DCF38DB49B3F7CE4F75A80 /* iCloudSyncManager.swift */; };
 		3919B2D5E5EFDAFB875107F4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B0C5088244C8630E0FB596 /* Theme.swift */; };
 		395E62EB917D01979BD0205B /* AccessibilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57789BFBF328C00C5FB7044C /* AccessibilityExtensions.swift */; };
+		40F96150CB978B7DBA66E28C /* DustAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868DDE432EBEBAB9D85D13A /* DustAPI.swift */; };
 		45C5593B172548D80A1030C1 /* SmartCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF556D1FB0A04DF42E7E957 /* SmartCleaner.swift */; };
 		4ED3F699A4EB1ADA4C11DD66 /* ExclusionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BA9841780B90C5EFFAC2D2 /* ExclusionManager.swift */; };
 		66388D8BBA736A534B0FFDE6 /* ShortcutsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC970A2F2D8F8B029967771 /* ShortcutsManager.swift */; };
@@ -32,10 +34,12 @@
 
 /* Begin PBXFileReference section */
 		040175A6915942937E0A2963 /* ScanHistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHistoryStore.swift; sourceTree = "<group>"; };
+		1010A66AE28E8586D560D8B5 /* DustEnterprise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustEnterprise.swift; sourceTree = "<group>"; };
 		143923966285663C9BEE4124 /* SmartGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartGroups.swift; sourceTree = "<group>"; };
 		152F85786A1D27F0F0994215 /* DiskHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskHistory.swift; sourceTree = "<group>"; };
 		19E2F9587D1FDE724749EA35 /* SemanticDeduplicationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticDeduplicationEngine.swift; sourceTree = "<group>"; };
 		2939C0E422B2F81556AC46DF /* ExportReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportReportService.swift; sourceTree = "<group>"; };
+		3868DDE432EBEBAB9D85D13A /* DustAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustAPI.swift; sourceTree = "<group>"; };
 		4902BA5CDE8743AD3DD9AE3D /* Dust.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dust.entitlements; sourceTree = "<group>"; };
 		54FF0D5B546035ED26A9E15F /* DuplicateFinderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateFinderService.swift; sourceTree = "<group>"; };
 		57789BFBF328C00C5FB7044C /* AccessibilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityExtensions.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 		81329FF317629B4A713846F7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3868DDE432EBEBAB9D85D13A /* DustAPI.swift */,
+				1010A66AE28E8586D560D8B5 /* DustEnterprise.swift */,
 				CFAC5FF07A302A6E327C44A6 /* DustR12R15.swift */,
 				143923966285663C9BEE4124 /* SmartGroups.swift */,
 			);
@@ -193,6 +199,8 @@
 				7E9CF7814569B52BDD5B7AE1 /* DuplicateFinder.swift in Sources */,
 				902DC0194BA7DA9798D2D202 /* DuplicateFinderService.swift in Sources */,
 				F87292BC063761799086B5FE /* DuplicateGroupView.swift in Sources */,
+				40F96150CB978B7DBA66E28C /* DustAPI.swift in Sources */,
+				1C9C105244449700344FC7E1 /* DustEnterprise.swift in Sources */,
 				ED86FD9395B4BC8F2E93B8D5 /* DustExport.swift in Sources */,
 				E154214FD72B18E9198F858C /* DustR12R15.swift in Sources */,
 				4ED3F699A4EB1ADA4C11DD66 /* ExclusionManager.swift in Sources */,
