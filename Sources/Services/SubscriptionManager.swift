@@ -1,36 +1,152 @@
 import Foundation
 import StoreKit
 
-@available(macOS 13.0, *)
-public final class DustSubscriptionManager: ObservableObject {
-    public static let shared = DustSubscriptionManager()
-    @Published public private(set) var subscription: DustSubscription?
-    @Published public private(set) var products: [Product] = []
-    private init() {}
-    public func loadProducts() async {
-        do { products = try await Product.products(for: ["com.dust.macos.pro.monthly","com.dust.macos.pro.yearly","com.dust.macos.team.monthly","com.dust.macos.team.yearly"]) }
-        catch { print("Failed to load products") }
+// MARK: - Subscription Manager (R16)
+
+@MainActor
+final class DustSubscriptionManager: ObservableObject {
+    static let shared = DustSubscriptionManager()
+
+    @Published private(set) var currentTier: DustSubscriptionTier = .free
+    @Published private(set) var products: [Product] = []
+    @Published private(set) var isLoading: Bool = false
+    @Published private(set) var isPurchasing: Bool = false
+    @Published private(set) var purchaseError: String?
+    @Published var hasActiveSubscription: Bool = false
+
+    private var transactionListener: Task<Void, Error>?
+    private let userDefaultsKey = "dust_subscription_tier"
+
+    private init() {
+        loadCurrentTier()
+        startTransactionListener()
+        Task { await loadProducts() }
     }
-    public func canAccess(_ feature: DustFeature) -> Bool {
-        guard let sub = subscription else { return false }
-        switch feature {
-        case .widgets: return sub.tier != .free
-        case .shortcuts: return sub.tier != .free
-        case .team: return sub.tier == .team
+
+    func loadProducts() async {
+        isLoading = true
+        defer { isLoading = false }
+
+        do {
+            let productIds = [
+                "com.dust.pro.monthly", "com.dust.pro.yearly",
+                "com.dust.team.monthly", "com.dust.team.yearly"
+            ]
+            products = try await Product.products(for: productIds)
+        } catch {
+            print("Failed to load products: \(error)")
         }
     }
-    public func updateStatus() async {
-        var found: DustSubscription = DustSubscription(tier: .free)
+
+    func purchase(_ tier: DustSubscriptionTier, period: String = "monthly") async throws -> Bool {
+        isPurchasing = true
+        purchaseError = nil
+        defer { isPurchasing = false }
+
+        let productId = tier.productId + "." + period
+        guard let product = products.first(where: { $0.id == productId }) else {
+            purchaseError = "Product not found"
+            return false
+        }
+
+        let result = try await product.purchase()
+        switch result {
+        case .success(let verification):
+            let transaction = try checkVerified(verification)
+            await updateCurrentTier(tier)
+            await transaction.finish()
+            return true
+        case .userCancelled:
+            return false
+        case .pending:
+            purchaseError = "Purchase is pending"
+            return false
+        default:
+            return false
+        }
+    }
+
+    func restorePurchases() async {
+        isLoading = true
+        defer { isLoading = false }
+        do {
+            try await AppStore.sync()
+            await updateTierFromTransactions()
+        } catch {
+            purchaseError = "Restore failed: \(error.localizedDescription)"
+        }
+    }
+
+    private func startTransactionListener() {
+        transactionListener = Task { [weak self] in
+            for await result in Transaction.updates {
+                guard let self = self else { return }
+                do {
+                    let transaction = try self.checkVerified(result)
+                    await self.updateTierFromTransactions()
+                    await transaction.finish()
+                } catch {
+                    print("Transaction verification failed: \(error)")
+                }
+            }
+        }
+    }
+
+    private func updateTierFromTransactions() async {
+        var highestTier: DustSubscriptionTier = .free
         for await result in Transaction.currentEntitlements {
-            do {
-                let t = try checkVerified(result)
-                if t.productID.contains("team") { found = DustSubscription(tier: .team, status: t.revocationDate == nil ? "active" : "expired") }
-                else if t.productID.contains("pro") { found = DustSubscription(tier: .pro, status: t.revocationDate == nil ? "active" : "expired") }
-            } catch { continue }
+            if case .verified(let transaction) = result {
+                if let productId = transaction.productID as String? {
+                    if productId.contains("pro") && DustSubscriptionTier.pro.rawValue > highestTier.rawValue { highestTier = .pro }
+                    if productId.contains("team") && DustSubscriptionTier.team.rawValue > highestTier.rawValue { highestTier = .team }
+                }
+            }
         }
-        await MainActor.run { self.subscription = found }
+        await updateCurrentTier(highestTier)
     }
-    public func restore() async throws { try await AppStore.sync(); await updateStatus() }
-    private func checkVerified<T>(_ r: VerificationResult<T>) throws -> T { switch r { case .unverified: throw NSError(domain: "Dust", code: -1); case .verified(let s): return s } }
+
+    private func updateCurrentTier(_ tier: DustSubscriptionTier) async {
+        currentTier = tier
+        hasActiveSubscription = tier != .free
+        UserDefaults.standard.set(currentTier.rawValue, forKey: userDefaultsKey)
+    }
+
+    private func loadCurrentTier() {
+        if let saved = UserDefaults.standard.string(forKey: userDefaultsKey),
+           let tier = DustSubscriptionTier(rawValue: saved) {
+            currentTier = tier
+            hasActiveSubscription = tier != .free
+        }
+    }
+
+    private nonisolated func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
+        switch result {
+        case .unverified: throw SubscriptionError.verificationFailed
+        case .verified(let value): return value
+        }
+    }
+
+    func hasEntitlement(_ feature: String) -> Bool {
+        switch currentTier {
+        case .free: return false
+        case .pro: return true
+        case .team: return true
+        }
+    }
 }
-public enum DustFeature { case widgets, shortcuts, team }
+
+enum SubscriptionError: LocalizedError {
+    case verificationFailed
+    var errorDescription: String? { "Transaction verification failed" }
+}
+
+// Extension to add productId to existing DustSubscriptionTier
+extension DustSubscriptionTier {
+    var productId: String {
+        switch self {
+        case .free: return "com.dust.free"
+        case .pro: return "com.dust.pro"
+        case .team: return "com.dust.team"
+        }
+    }
+}

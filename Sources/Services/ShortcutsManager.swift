@@ -51,7 +51,7 @@ struct DustShortcuts: AppShortcutsProvider {
             intent: GetFocusStatsIntent(),
             phrases: [
                 "Get focus stats in \(.applicationName)",
-                "Show my focus stats"
+                "Show my focus stats in \(.applicationName)"
             ],
             shortTitle: "Focus Stats",
             systemImageName: "chart.bar"
